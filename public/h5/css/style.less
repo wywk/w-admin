@@ -1,0 +1,204 @@
+@import 'base';
+.toast-wrapper {
+  position: fixed;
+  display: flex;
+  display: -webkit-flex;
+  justify-content: center;
+  -webkit-justify-content: center;
+  align-items: center;
+  -webkit-align-items: center;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  -webkit-tap-highlight-color: transparent;
+  z-index: 99999;
+  .toast{
+    background:rgba(0,0,0,0.75);
+    border-radius: 16*@scale;
+    max-width: 570*@scale;
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    position: relative;
+    right: 0;
+    left: 0;
+    top: 100*@scale;
+    margin: 0 auto;
+    .content{
+      padding: 20*@scale 68*@scale;
+      font-size: 28*@scale;
+      line-height: 40*@scale;
+      color: #ffffff;
+    }
+  }
+}
+.content_wrapper {
+	width: 100%;
+	overflow: hidden;
+	.coupon_bg {
+		width: 100%;
+		height: 100vh;
+		background: url(../img/coupon_bg.jpeg) no-repeat center top;
+		background-size: 100%;
+		overflow: hidden;
+		.coupon_main {
+			width: 500 * @scale;
+			height: 481 * @scale;
+			margin: 534 * @scale auto 0;
+			background: url(../img/coupon_main.png) no-repeat center;
+			background-size: 100%;
+			overflow: hidden;
+			padding: 0 25 * @scale;
+			.coupon_info {
+				width: 100%;
+				display: flex;
+				height: 202 * @scale;
+				.left_info {
+					width: 186 * @scale;
+					flex-shrink: 0;
+					.coupon_num {
+						width: 100%;
+						text-align: center;
+						font-size: 64 * @scale;
+						line-height: 72 * @scale;
+						margin-top: 30 * @scale;
+						color: #fe640f;
+						font-weight: bold;
+						.unit {
+							font-size: 40 * @scale;
+							font-weight: normal;
+						}
+					}
+					.coupon_tip {
+						width: 100%;
+						text-align: center;
+						font-size: 24 * @scale;
+						line-height: 28 * @scale;
+						color: #fe640f;
+					}
+				}
+				.right_info {
+					flex-grow: 1;
+					min-width: 0;
+					margin: 0 16 * @scale;
+					.coupon_name {
+						width: 100%;
+						font-size: 32 * @scale;
+						color: #fd630f;
+						font-weight: bold;
+						line-height: 40 * @scale;
+						margin-top: 44 * @scale;
+						overflow: hidden;
+						text-overflow: ellipsis;
+						white-space: nowrap;
+					}
+					.coupon_time {
+						width: 100%;
+						font-size: 18 * @scale;
+						color: #fd630f;
+						line-height: 24 * @scale;
+						margin-top: 28 * @scale;
+					}
+				}
+			}
+			.sub_info{
+				width: 100%;
+				overflow: hidden;
+				display: none;
+				&.show{
+					display: block;
+				}
+				.sub_tel {
+					width: 100%;
+					height: 88 * @scale;
+					background: rgba(242, 238, 226, 1);
+					border-radius: 44 * @scale;
+					box-shadow: none;
+					outline: none;
+					margin-top: 15 * @scale;
+					padding: 0 30 * @scale;
+					display: block;
+					box-sizing: border-box;
+					border: none;
+					font-size: 28 * @scale;
+					line-height: 88 * @scale;
+				}
+				.sub_btn {
+					width: 100%;
+					height: 88 * @scale;
+					background: rgba(255, 211, 1, 1);
+					border-radius: 44 * @scale;
+					margin-top: 40 * @scale;
+					text-align: center;
+					font-size: 32 * @scale;
+					color: #e14512;
+					font-weight: bold;
+					line-height: 88 * @scale;
+				}
+			}
+			.success_info{
+				width: 100%;
+				overflow: hidden;
+				display: none;
+				&.show{
+					display: block;
+				}
+				.success_ico{
+					width: 75*@scale;
+					height: 86*@scale;
+					display: block;
+					margin: 30*@scale auto 0;
+				}
+				.success_text{
+					width: 100%;
+					text-align: center;
+					font-size: 32*@scale;
+					color: #F9D53D;
+					font-weight: bold;
+					margin-top: 22*@scale;
+					line-height: 40*@scale;
+				}
+			}
+			.error_info{
+				width: 100%;
+				overflow: hidden;
+				display: none;
+				&.show{
+					display: block;
+				}
+				.confirm_btn,.count_btn{
+					width: 100%;
+					height: 88 * @scale;
+					background: rgba(255, 211, 1, 1);
+					border-radius: 44 * @scale;
+					margin-top: 144 * @scale;
+					text-align: center;
+					font-size: 32 * @scale;
+					color: #e14512;
+					font-weight: bold;
+					line-height: 88 * @scale;
+				}
+			}
+			.time_info{
+				width: 100%;
+				overflow: hidden;
+				display: none;
+				&.show{
+					display: block;
+				}
+				.confirm_btn,.count_btn{
+					width: 100%;
+					height: 88 * @scale;
+					background: rgba(255, 211, 1, 1);
+					border-radius: 44 * @scale;
+					margin-top: 144 * @scale;
+					text-align: center;
+					font-size: 32 * @scale;
+					color: #e14512;
+					font-weight: bold;
+					line-height: 88 * @scale;
+				}
+			}
+		}
+	}
+}

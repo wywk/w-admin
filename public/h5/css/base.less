@@ -1,0 +1,290 @@
+@scale: 1rem/750px;
+@font-scale: 1/2px;
+@imgPath: '../img/';
+*{
+  margin: 0;
+  padding: 0;
+  -webkit-tap-highlight-color: rgba(0,0,0,0);
+  cursor: pointer;
+}
+li,ul{
+  list-style: none;
+}
+a{
+  text-decoration: none;
+}
+i{
+  font-style: normal;
+}
+html{
+  font-size: 375px;
+}
+input,select{
+  outline: none;
+}
+img{
+  border: none;
+  display: block;
+}
+body{
+  font-family: "Helvetica Neue",Helvetica,"PingFang SC","Hiragino Sans GB","Microsoft YaHei","微软雅黑",Arial,sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+.border-top-color(@color: #ccc){
+  &:after{
+    display: block;
+    content: '';
+    position: absolute;
+    pointer-events: none; /* 防止点击触发 */
+    box-sizing: border-box;
+    width: 200%;
+    height: 200%;
+    left: 0;
+    top: 0;
+    border-top: 1px solid @color;
+    transform: scale(0.5);
+    -webkit-transform-origin: 0 0;
+    -webkit-transform: scale(0.5);
+    transform-origin: 0 0;
+  }
+}
+.border-bottom-color(@color: #ccc){
+  &:after{
+    display: block;
+    content: '';
+    position: absolute;
+    pointer-events: none; /* 防止点击触发 */
+    box-sizing: border-box;
+    width: 200%;
+    height: 200%;
+    left: 0;
+    top: 0;
+    z-index: 10;
+    border-bottom: 1px solid @color;
+    transform: scale(0.5);
+    -webkit-transform-origin: 0 0;
+    -webkit-transform: scale(0.5);
+    transform-origin: 0 0;
+  }
+}
+.border-left-color(@color: #ccc){
+  &:after{
+    display: block;
+    content: '';
+    position: absolute;
+    pointer-events: none; /* 防止点击触发 */
+    box-sizing: border-box;
+    width: 200%;
+    height: 200%;
+    left: 0;
+    top: 0;
+    border-left: 1px solid @color;
+    transform: scale(0.5);
+    -webkit-transform-origin: 0 0;
+    -webkit-transform: scale(0.5);
+    transform-origin: 0 0;
+  }
+}
+.border-right-color(@color: #ccc){
+  &:after{
+    display: block;
+    content: '';
+    position: absolute;
+    pointer-events: none; /* 防止点击触发 */
+    box-sizing: border-box;
+    width: 200%;
+    height: 200%;
+    left: 0;
+    top: 0;
+    border-right: 1px solid @color;
+    transform: scale(0.5);
+    -webkit-transform-origin: 0 0;
+    -webkit-transform: scale(0.5);
+    transform-origin: 0 0;
+  }
+}
+.border-color(@color: #ccc){
+  &:after{
+    display: block;
+    content: '';
+    position: absolute;
+    pointer-events: none; /* 防止点击触发 */
+    box-sizing: border-box;
+    width: 200%;
+    height: 200%;
+    left: 0;
+    top: 0;
+    border: 1px solid @color;
+    transform: scale(0.5);
+    -webkit-transform-origin: 0 0;
+    -webkit-transform: scale(0.5);
+    transform-origin: 0 0;
+  }
+}
+.border-color-2(@color: #ccc){
+  &:after{
+    display: block;
+    content: '';
+    position: absolute;
+    pointer-events: none; /* 防止点击触发 */
+    box-sizing: border-box;
+    width: 200%;
+    height: 200%;
+    left: 0;
+    top: 0;
+    border: 2px solid @color;
+    border-radius: 32*@scale;
+    transform: scale(0.5);
+    -webkit-transform-origin: 0 0;
+    -webkit-transform: scale(0.5);
+    transform-origin: 0 0;
+  }
+}
+.border-color-2y(@color: #ccc){
+  &:after{
+    display: block;
+    content: '';
+    position: absolute;
+    pointer-events: none; /* 防止点击触发 */
+    box-sizing: border-box;
+    width: 200%;
+    height: 200%;
+    left: 0;
+    top: 0;
+    border-top: 2px solid @color;
+    border-bottom: 2px solid @color;
+    transform: scale(0.5);
+    -webkit-transform-origin: 0 0;
+    -webkit-transform: scale(0.5);
+    transform-origin: 0 0;
+  }
+}
+.border-color-2x(@color: #ccc){
+  &:after{
+    display: block;
+    content: '';
+    position: absolute;
+    pointer-events: none; /* 防止点击触发 */
+    box-sizing: border-box;
+    width: 200%;
+    height: 200%;
+    left: 0;
+    top: 0;
+    border-left: 2px solid @color;
+    transform: scale(0.5);
+    -webkit-transform-origin: 0 0;
+    -webkit-transform: scale(0.5);
+    transform-origin: 0 0;
+  }
+}
+.border-color-2z(@color: #ccc){
+  &:after{
+    display: block;
+    content: '';
+    position: absolute;
+    pointer-events: none; /* 防止点击触发 */
+    box-sizing: border-box;
+    width: 200%;
+    height: 200%;
+    left: 0;
+    top: 0;
+    border-right: 2px solid @color;
+    transform: scale(0.5);
+    -webkit-transform-origin: 0 0;
+    -webkit-transform: scale(0.5);
+    transform-origin: 0 0;
+  }
+}
+.border-color-2-dashed(@color: #ccc){
+  &:after{
+    display: block;
+    content: '';
+    position: absolute;
+    pointer-events: none; /* 防止点击触发 */
+    box-sizing: border-box;
+    width: 200%;
+    height: 200%;
+    left: 0;
+    top: 0;
+    border: 2px dashed @color;
+    border-radius: 32*@scale;
+    transform: scale(0.5);
+    -webkit-transform-origin: 0 0;
+    -webkit-transform: scale(0.5);
+    transform-origin: 0 0;
+  }
+}
+.border-bottom-color-2(@color: #ccc){
+  &:after{
+    display: block;
+    content: '';
+    position: absolute;
+    pointer-events: none; /* 防止点击触发 */
+    box-sizing: border-box;
+    width: 200%;
+    height: 200%;
+    left: 0;
+    top: 0;
+    border-bottom: 2px solid @color;
+    transform: scale(0.5);
+    -webkit-transform-origin: 0 0;
+    -webkit-transform: scale(0.5);
+    transform-origin: 0 0;
+  }
+}
+.border-right-color-2(@color: #ccc){
+  &:after{
+    display: block;
+    content: '';
+    position: absolute;
+    pointer-events: none; /* 防止点击触发 */
+    box-sizing: border-box;
+    width: 200%;
+    height: 200%;
+    left: 0;
+    top: 0;
+    border-right: 2px solid @color;
+    transform: scale(0.5);
+    -webkit-transform-origin: 0 0;
+    -webkit-transform: scale(0.5);
+    transform-origin: 0 0;
+  }
+}
+.border-color-2s(@color: #ccc,@border-radius: 32){
+  &:after{
+    display: block;
+    content: '';
+    position: absolute;
+    pointer-events: none; /* 防止点击触发 */
+    box-sizing: border-box;
+    width: 200%;
+    height: 200%;
+    left: 0;
+    top: 0;
+    border: 2px solid @color;
+    border-radius: @border-radius*@scale;
+    transform: scale(0.5);
+    -webkit-transform-origin: 0 0;
+    -webkit-transform: scale(0.5);
+    transform-origin: 0 0;
+  }
+}
+.border-color-1s(@color: #ccc,@border-radius: 32){
+  &:after{
+    display: block;
+    content: '';
+    position: absolute;
+    pointer-events: none; /* 防止点击触发 */
+    box-sizing: border-box;
+    width: 200%;
+    height: 200%;
+    left: 0;
+    top: 0;
+    border: 1px solid @color;
+    border-radius: @border-radius*@scale;
+    transform: scale(0.5);
+    -webkit-transform-origin: 0 0;
+    -webkit-transform: scale(0.5);
+    transform-origin: 0 0;
+  }
+}
