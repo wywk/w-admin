@@ -39,9 +39,15 @@ class LoginController extends Controller
             return $this->error('帐号未启用！');
         }
         auth('web')->login($user);
-        $menu_ids = RoleMenu::where(['role_id' => $user->role_id])->pluck('menu_id')->toArray();
-        $urls = Menu::whereIn('id', $menu_ids)->pluck('url')->toArray();
-        $menu = MenuService::getMenu(0, $menu_ids);
+        if ($user->role_id != 1) {
+            $menu_ids = RoleMenu::where(['role_id' => $user->role_id])->pluck('menu_id')->toArray();
+            $urls = Menu::whereIn('id', $menu_ids)->pluck('url')->toArray();
+            $menu = MenuService::getMenu(0, $menu_ids);
+        } else {
+            $menu = MenuService::getAdminMenu();
+            $menu_ids = Menu::pluck('id')->toArray();
+            $urls = Menu::whereIn('id',$menu_ids)->pluck('url')->toArray();
+        }
         session(['menu' => $menu, 'user' => $user->toArray(), 'menu_ids' => $menu_ids, 'urls' => $urls]);
         return $this->success('登录成功！');
     }

@@ -7,7 +7,7 @@ if (!function_exists('str_rep_key')) {
      * @param $str
      * @param string $key
      * @return mixed
-     * @author 牛永光 <nyg199111@126.com>
+     * @author wywk  947036348@qq.com
      * @date 2019-07-23 21:36
      */
     function str_rep_key($str, $key = '')

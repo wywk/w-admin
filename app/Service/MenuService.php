@@ -6,12 +6,26 @@ use App\Model\Menu;
 
 class MenuService
 {
+    static public function getAdminMenu($pid = 0)
+    {
+        $list = Menu::where(['pid' => $pid])->orderBy('sort', 'asc')->where('is_show', 1)->get()->toArray();
+        $data = [];
+        foreach ($list as $v) {
+            $children = self::getAdminMenu($v['id']);
+            $tmp = $v;
+            if ($children) {
+                $tmp['children'] = $children;
+            }
+            $data[] = $tmp;
+        }
+        return $data;
+    }
     /**
      * 获取菜单列表（菜单用）
      * @param int $pid
      * @param array $menus
      * @return array
-     * @author 牛永光 <nyg199111@126.com>
+     * @author wywk  947036348@qq.com
      * @date 2019-07-17 23:11
      */
     static public function getMenu($pid = 0, $menus = [])
